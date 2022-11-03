@@ -1,0 +1,10 @@
+SPRITES
+Player + Wall- Made by Matthew Hall
+Enemy - https://opengameart.org/content/pufferfish
+
+SFX
+Pellet- https://soundimage.org/wp-content/uploads/2016/04/SynthChime11.mp3
+GameOver- https://soundimage.org/wp-content/uploads/2021/08/Sneaky-Cat.mp3
+BGM- https://soundimage.org/wp-content/uploads/2021/08/Monkey-Island-Band.mp3
+
+Font- https://www.1001fonts.com/wild-bandit-font.html

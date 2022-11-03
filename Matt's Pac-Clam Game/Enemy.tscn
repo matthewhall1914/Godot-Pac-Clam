@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/EnemySprites/puffer.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/EnemySprites/bluefish.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11.2382, 11.0309 )
+
+[node name="Enemy" type="Area2D" groups=[
+"enemy",
+]]
+script = ExtResource( 1 )
+
+[node name="normal" type="Sprite" parent="."]
+position = Vector2( -11.2996, -11.128 )
+texture = ExtResource( 2 )
+
+[node name="weak" type="Sprite" parent="."]
+position = Vector2( -11.1279, -11.0634 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -11.2713, -11.0633 )
+shape = SubResource( 1 )
+
+[node name="refresh" type="Timer" parent="."]
+autostart = true
+
+[node name="debuff" type="Timer" parent="."]
+wait_time = 7.0
+one_shot = true
+[connection signal="body_entered" from="." to="." method="_on_Enemy_body_entered"]
+[connection signal="timeout" from="refresh" to="." method="_on_refresh_timeout"]
+[connection signal="timeout" from="debuff" to="." method="_on_debuff_timeout"]
